@@ -1,5 +1,6 @@
 import ExpenseItem from "./ExpenseItem";
 import "./ExpenseItemList.css";
+import Card from "../ui/Card";
 function ExpenseItemList() {
   const expenses = [
     {
@@ -24,7 +25,7 @@ function ExpenseItemList() {
   ];
 
   return (
-    <div>
+    <Card className="expenses">
       <ul className="ul">
         {expenses.map((item, index) => {
           return (
@@ -32,7 +33,7 @@ function ExpenseItemList() {
           );
         })}
       </ul>
-    </div>
+    </Card>
   );
 }
 

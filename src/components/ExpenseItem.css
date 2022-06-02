@@ -20,7 +20,7 @@
   }
   
   .expense-item h2 {
-    color: #3a3a3a;
+    color: #d3d3d3;
     font-size: 1rem;
     flex: 1;
     margin: 0 1rem;
@@ -31,7 +31,7 @@
     font-size: 1rem;
     font-weight: bold;
     color: white;
-    background-color: #40005d;
+    background-color: #ff7597;
     border: 1px solid white;
     padding: 0.5rem;
     border-radius: 12px;
