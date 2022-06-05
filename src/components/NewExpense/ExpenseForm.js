@@ -1,23 +1,20 @@
 import "./ExpenseForm.css";
 import React, { useState } from "react";
-function ExpenseForm() {
+function ExpenseForm(props) {
   const [enteredTitle, setEnteredTitle] = useState("");
   const [enteredAmount, setEnteredAmount] = useState("");
   const [enteredDate, setEnteredDate] = useState("");
 
   function titleChangeHandler(event) {
     setEnteredTitle(event.target.value);
-    console.log(event.target.value);
   }
 
   function numberChangeHandler(event) {
-    console.log(event.target.value);
     setEnteredAmount(event.target.value);
   }
 
   function dateChangeHandler(event) {
     setEnteredDate(event.target.value);
-    console.log(event.target.value);
   }
 
   function submitFormHandler(event) {
@@ -28,10 +25,11 @@ function ExpenseForm() {
       amount: enteredAmount,
       date: new Date(enteredDate),
     };
+
+    props.onSubmit(expenseData);
     setEnteredAmount("");
     setEnteredDate("");
     setEnteredTitle("");
-    console.log(expenseData);
   }
   return (
     <form onSubmit={submitFormHandler}>
